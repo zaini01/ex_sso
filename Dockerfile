@@ -7,10 +7,10 @@ RUN mkdir /src/server
 RUN npm install nodemon -g
 WORKDIR /src
 
-ADD .sso-client/server/package.json /src/server/package.json
+ADD ./sso-client/server/package.json /src/server/package.json
 RUN cd ./server && npm install
 
-ADD .sso-client/package.json /src/package.json
+ADD ./sso-client/package.json /src/package.json
 RUN npm install
 
 COPY ./sso-client .
