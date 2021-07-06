@@ -32,7 +32,7 @@ function SignIn() {
       let query = queryString.parse(window.location.search);
 
       dispatch(setRedirect_url(query.redirect_url));
-      dispatch(setClient_id("RSK"));
+      dispatch(setClient_id(query.client_id));
     }
   }, []);
 

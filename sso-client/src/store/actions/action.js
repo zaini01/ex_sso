@@ -52,7 +52,7 @@ export function forgotPassword(payload) {
       dispatch(setLoadingStatus(true));
       let response = await axios.post(`${serverHost}/forgotPassword`, payload);
       dispatch(setResult(response.data));
-      dispatch(setEmailSendStatus(false));
+      dispatch(setEmailSendStatus(true));
     } catch (error) {
       dispatch(setLoadingStatus(false));
       dispatch(setError(error.response.data.error_description));
@@ -103,12 +103,9 @@ function setResult(payload) {
 }
 
 function redirect(redirect_url, refresh_token) {
-  console.log(refresh_token);
-  alert(refresh_token);
-
-  // if (redirect_url.includes("?")) {
-  //   window.location.assign(`${redirect_url}&code=${refresh_token}`);
-  // } else {
-  //   window.location.assign(`${redirect_url}?code=${refresh_token}`);
-  // }
+  if (redirect_url.includes("?")) {
+    window.location.assign(`${redirect_url}&code=${refresh_token}`);
+  } else {
+    window.location.assign(`${redirect_url}?code=${refresh_token}`);
+  }
 }

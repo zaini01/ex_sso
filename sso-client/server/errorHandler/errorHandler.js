@@ -1,5 +1,4 @@
 function errorHandler(err, req, res, next) {
-  console.log(err);
   if (err == "Error: Unsupported state or unable to authenticate data") {
     res.status(401).send("invalid code");
   } else if (err.response) {
@@ -26,10 +25,11 @@ function errorHandler(err, req, res, next) {
         "Failed to send execute actions email";
     }
 
-    return res.status(err.response.status).json(err.response.data);
+    res.status(err.response.status).json(err.response.data);
   } else {
-    return res.status(500).send("internal server error");
+    res.status(500).send("internal server error");
   }
 }
 
 module.exports = errorHandler;
+

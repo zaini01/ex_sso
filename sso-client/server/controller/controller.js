@@ -379,7 +379,7 @@ class Controller {
         },
       });
 
-      return res.status(200).json({ message: "email sent" });
+      return res.status(200).json({ message: "Mail has been send." });
     } catch (err) {
       return next(err);
     }
