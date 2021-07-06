@@ -1,0 +1,5 @@
+{
+    "clientId": "nodejs-microservice",
+    "enabled": true,
+    "bearerOnly": true
+}

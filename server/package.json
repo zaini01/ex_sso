@@ -1,0 +1,35 @@
+{
+  "name": "service-nodejs",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "tape test/*.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.13.3",
+    "cors": "^2.8.1",
+    "cryptr": "^6.0.2",
+    "express": "^4.13.3",
+    "express-session": "^1.14.2",
+    "jwt-decode": "^3.1.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "eslint-config-semistandard": "^7.0.0-beta.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-react": "^6.1.2",
+    "eslint-plugin-standard": "^2.0.0",
+    "ink-docstrap": "^1.1.4",
+    "jsdoc": "^3.4.0",
+    "jshint": "^2.9.1",
+    "keycloak-client-registration": "^0.1.0",
+    "keycloak-request-token": "^0.1.0",
+    "qs": "^6.10.1",
+    "roi": "^0.15.0",
+    "tape": "^4.5.1"
+  }
+}
